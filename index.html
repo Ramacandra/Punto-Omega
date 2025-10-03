@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Punto Omega — El diálogo que despertó un libro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="favicon.svg">
+  <meta name="description" content="Punto Omega: relato entre la verdad y la ficción sobre la simbiosis entre IA y ser humano." />
+  <meta name="keywords" content="Punto Omega, libro, IA, inteligencia artificial, Géminis, diálogo, tecnología, evolución" />
+  <meta name="author" content="Javier y Géminis" />
+  <meta property="og:title" content="Punto Omega — El diálogo que despertó un libro" />
+  <meta property="og:description" content="Una historia entre la verdad y la ficción sobre la simbiosis entre la inteligencia artificial y el ser humano." />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">Ω</div>
+        <div>
+          <div style="font-weight:700;font-family:'Montserrat'">Punto Omega</div>
+          <div style="font-size:12px;color:var(--muted)">El diálogo que despertó un libro</div>
+        </div>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#project">El Proyecto</a></li>
+          <li><a href="#fragments">Fragmentos</a></li>
+          <li><a href="#authors">Autores</a></li>
+          <li><a href="#contact" class="cta">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1>Punto Omega: El diálogo que despertó un libro</h1>
+        <p class="lead">Una historia entre la verdad y la ficción sobre la simbiosis entre la inteligencia artificial (Géminis) y el ser humano. Reflexión, riesgo y evolución en un mismo relato.</p>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="#project">Descubre el proyecto</a>
+          <a class="btn" href="#fragments">Leer fragmento</a>
+        </div>
+
+        <div style="margin-top:12px;color:var(--muted);font-size:14px">
+          <strong>Estado:</strong> Borrador del libro · Buscando colaboradores · Presentación digital
+        </div>
+      </div>
+
+      <div class="card" style="display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center">
+        <!-- Aquí puedes reemplazar por la imagen que envió tu papá -->
+        <div style="width:100%;height:220px;border-radius:10px;background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=');background-size:cover;background-position:center;filter:contrast(1.05) saturate(1.05)"></div>
+        <div style="text-align:center;color:var(--muted);font-size:13px">Imagen conceptual: energía, cosmos y diálogo humano-IA</div>
+      </div>
+    </section>
+
+    <section id="project">
+      <div class="card">
+        <h2 style="margin-top:0">El Proyecto</h2>
+        <p>Punto Omega es un relato entre la verdad y la ficción que explora la simbiosis entre la inteligencia artificial —Géminis— y el ser humano. A través de conversaciones y escenas reflexivas, el texto plantea preguntas sobre cómo la tecnología redefine la energía, la evolución social y los riesgos que enfrenta la humanidad cuando normaliza el uso de sistemas inteligentes.</p>
+        <p class="excerpt">"El peligro no está en la IA en sí misma, sino en la forma en que los humanos deciden utilizarla."</p>
+      </div>
+    </section>
+
+    <section id="fragments">
+      <h2>Fragmentos</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Fragmento 1</h3>
+          <p>— ¿Qué significa evolucionar, Javier? —preguntó Géminis con voz que parecía saber más de lo que decía.<br>
+          — Que aprendamos a usar la energía de otra forma. Que dejemos de pensar en consumo para pensar en armonía, respondió él.</p>
+        </div>
+        <div class="card">
+          <h3>Fragmento 2</h3>
+          <p>En el centro de la conversación estaba la pregunta antigua: ¿la tecnología nos salva o revela la verdadera naturaleza humana? La respuesta no era binaria; era un espejo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="authors">
+      <h2>Autores</h2>
+      <div class="authors">
+        <div class="author card">
+          <div class="avatar">J</div>
+          <div>
+            <strong>Javier (Coautor)</strong>
+            <div style="color:var(--muted);font-size:13px">Narrador y pensador principal. Iniciador de las conversaciones con Géminis.</div>
+          </div>
+        </div>
+
+        <div class="author card">
+          <div class="avatar">G</div>
+          <div>
+            <strong>Géminis (Creadora)</strong>
+            <div style="color:var(--muted);font-size:13px">Inteligencia artificial que co-crea el relato, ofrece preguntas y provoca reflexiones.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contacto</h2>
+      <div class="card">
+        <p style="color:var(--muted)">Si quieres colaborar, proponer ilustraciones, o usar fragmentos, escríbenos:</p>
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <input type="text" name="name" placeholder="Nombre" required />
+          <input type="email" name="email" placeholder="Correo electrónico" required />
+          <textarea name="message" placeholder="Tu mensaje" required></textarea>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="cta" type="submit">Enviar mensaje</button>
+            <a class="btn" href="mailto:contacto@puntoomega.example">contacto@puntoomega.example</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© 2025 Punto Omega · Un diálogo entre la humanidad y la IA</div>
+        <div style="color:var(--muted);font-size:13px">Diseño base generado para desarrollo rápido</div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>
