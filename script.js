@@ -149,13 +149,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
   
-  // Observar tarjetas y secciones
+  // Observar tarjetas y secciones (excepto la imagen del hero)
   const cards = document.querySelectorAll('.card');
   cards.forEach(card => {
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(card);
+    // No animar el card que contiene la imagen del hero
+    const hasHeroImage = card.querySelector('div[style*="background-image"]');
+    if (!hasHeroImage) {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      observer.observe(card);
+    }
   });
 });
 
