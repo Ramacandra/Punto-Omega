@@ -21,8 +21,8 @@ function handleSubmit(event) {
   // Simular delay de envío
   setTimeout(() => {
     // Aquí iría la lógica real de envío (ej: fetch a un endpoint)
-    console.log('Datos del formulario:', data);
-    
+    // console.log('Datos del formulario:', data);
+
     // Mostrar mensaje de éxito
     showNotification('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
     
@@ -159,11 +159,52 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Funcionalidad adicional para mejorar UX
-function toggleMobileMenu() {
-  // Para futuras implementaciones de menú móvil
-  console.log('Toggle mobile menu');
-}
+// Funcionalidad del menú hamburguesa
+document.addEventListener('DOMContentLoaded', function() {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const navMenu = document.querySelector('nav ul');
+  const navLinks = document.querySelectorAll('nav ul a');
+
+  if (menuToggle) {
+    menuToggle.addEventListener('click', function() {
+      navMenu.classList.toggle('active');
+
+      // Animar las barras del menú
+      const spans = this.querySelectorAll('span');
+      if (navMenu.classList.contains('active')) {
+        spans[0].style.transform = 'rotate(45deg) translateY(7px)';
+        spans[1].style.opacity = '0';
+        spans[2].style.transform = 'rotate(-45deg) translateY(-7px)';
+      } else {
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+
+    // Cerrar menú al hacer clic en un enlace
+    navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        navMenu.classList.remove('active');
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      });
+    });
+
+    // Cerrar menú al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('nav')) {
+        navMenu.classList.remove('active');
+        const spans = menuToggle.querySelectorAll('span');
+        spans[0].style.transform = 'none';
+        spans[1].style.opacity = '1';
+        spans[2].style.transform = 'none';
+      }
+    });
+  }
+});
 
 // Validación de formulario en tiempo real
 document.addEventListener('DOMContentLoaded', function() {
