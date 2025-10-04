@@ -526,6 +526,16 @@ footer {
   animation: fadeInUp 0.6s ease-out;
 }
 
+/* Desactivar animación y movimiento en la imagen del hero */
+.hero-image-card {
+  animation: none;
+  transition: none;
+}
+
+.hero-image-card:hover {
+  transform: none;
+}
+
 /* Scroll suave */
 html {
   scroll-behavior: smooth;
