@@ -124,15 +124,15 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
   
-  // Efecto parallax sutil en la imagen hero
-  const heroImage = document.querySelector('.card div[style*="background-image"]');
-  if (heroImage) {
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const parallax = scrolled * 0.5;
-      heroImage.style.transform = `translateY(${parallax}px)`;
-    });
-  }
+  // Efecto parallax desactivado
+  // const heroImage = document.querySelector('.card div[style*="background-image"]');
+  // if (heroImage) {
+  //   window.addEventListener('scroll', () => {
+  //     const scrolled = window.pageYOffset;
+  //     const parallax = scrolled * 0.5;
+  //     heroImage.style.transform = `translateY(${parallax}px)`;
+  //   });
+  // }
   
   // Animación de entrada para elementos
   const observerOptions = {
