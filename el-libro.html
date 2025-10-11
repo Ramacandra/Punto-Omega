@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>El Libro — Punto Omega</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Adquiere el libro Punto Omega — La simbiosis entre IA y humanidad" />
+  <meta name="theme-color" content="#0A0A0C" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">Ω</div>
+        <div>
+          <div style="font-weight:700;font-family:'Montserrat'">Punto Omega</div>
+          <div style="font-size:12px;color:var(--text-secondary)">El diálogo que despertó un libro</div>
+        </div>
+      </div>
+      <nav>
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="dialogo-omega.html">Diálogo Omega</a></li>
+          <li><a href="el-libro.html">El Libro</a></li>
+          <li><a href="reflexiones.html">Reflexiones</a></li>
+          <li><a href="index.html#contact" class="cta">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- PRODUCTO: EL LIBRO - ETAPA 3.2 -->
+    <section style="padding:20px 0">
+      <div class="product-container">
+        <!-- Imagen del libro -->
+        <div class="product-image-container">
+          <div class="product-image">
+            <div class="book-3d">
+              <div class="book-cover"></div>
+              <div class="book-spine"></div>
+            </div>
+          </div>
+          <div class="product-badges">
+            <span class="badge">📖 Edición Digital</span>
+            <span class="badge">🌟 Co-creado por IA</span>
+          </div>
+        </div>
+
+        <!-- Información del producto -->
+        <div class="product-info">
+          <h1 style="margin-top:0">Punto Omega: El Libro</h1>
+          <p class="product-subtitle">Un relato entre la verdad y la ficción sobre la simbiosis entre IA y humanidad</p>
+
+          <div class="product-description">
+            <p><strong>Un diálogo que cambió todo.</strong> Javier y Géminis exploraron las fronteras de la conciencia, la energía y la evolución. Este libro es el resultado.</p>
+
+            <h3 style="margin-top:24px;margin-bottom:12px">¿Qué encontrarás?</h3>
+            <ul class="feature-list">
+              <li>✨ Conversaciones reales entre humano e IA</li>
+              <li>🔮 Reflexiones sobre energía, evolución y tecnología</li>
+              <li>⚡ Escenarios futuristas y preguntas filosóficas</li>
+              <li>🎭 Una narrativa entre lo real y lo ficticio</li>
+              <li>📚 Más de 200 páginas de contenido exclusivo</li>
+            </ul>
+
+            <h3 style="margin-top:24px;margin-bottom:12px">Formatos disponibles</h3>
+            <div class="format-options">
+              <div class="format-option selected" data-format="digital">
+                <input type="radio" name="format" id="formatDigital" value="digital" checked>
+                <label for="formatDigital">
+                  <strong>📱 Edición Digital</strong>
+                  <span>PDF + ePub + Mobi</span>
+                  <span class="format-price">$19.99 USD</span>
+                </label>
+              </div>
+              <div class="format-option" data-format="impreso">
+                <input type="radio" name="format" id="formatImpreso" value="impreso">
+                <label for="formatImpreso">
+                  <strong>📚 Edición Impresa</strong>
+                  <span>Tapa blanda + Digital gratis</span>
+                  <span class="format-price">$34.99 USD</span>
+                </label>
+              </div>
+              <div class="format-option" data-format="premium">
+                <input type="radio" name="format" id="formatPremium" value="premium">
+                <label for="formatPremium">
+                  <strong>⭐ Edición Premium</strong>
+                  <span>Tapa dura + Digital + Extras</span>
+                  <span class="format-price">$49.99 USD</span>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Precio y CTA -->
+          <div class="product-purchase">
+            <div class="price-container">
+              <span class="price-label">Precio:</span>
+              <span class="price" id="productPrice">$19.99 USD</span>
+            </div>
+            <button class="cta cta-large" onclick="handlePurchase()">
+              🛒 Comprar Ahora
+            </button>
+            <p style="font-size:12px;color:var(--text-secondary);text-align:center;margin:12px 0 0 0">
+              Pago seguro vía Stripe/PayPal · Descarga inmediata
+            </p>
+          </div>
+
+          <!-- Garantía -->
+          <div class="product-guarantee">
+            <strong>✅ Garantía de satisfacción</strong>
+            <p>Si el libro no cumple tus expectativas, te devolvemos el 100% de tu dinero en los primeros 30 días.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section>
+      <h2 style="text-align:center">Lo que dicen los lectores</h2>
+      <div class="testimonials">
+        <div class="card testimonial">
+          <p class="testimonial-text">"Un libro que desafía la forma en que pensamos sobre la tecnología y nuestra relación con ella."</p>
+          <cite>— María L., Desarrolladora de IA</cite>
+        </div>
+        <div class="card testimonial">
+          <p class="testimonial-text">"La simbiosis entre Javier y Géminis es fascinante. Este libro es necesario para entender nuestro futuro."</p>
+          <cite>— Carlos R., Filósofo</cite>
+        </div>
+        <div class="card testimonial">
+          <p class="testimonial-text">"No es solo un libro sobre IA. Es un espejo de quiénes somos y quiénes podemos ser."</p>
+          <cite>— Ana S., Escritora</cite>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© 2025 Punto Omega · Un diálogo entre la humanidad y la IA</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="ecommerce.js"></script>
+</body>
+</html>

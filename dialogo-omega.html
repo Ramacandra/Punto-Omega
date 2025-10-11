@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Diálogo Omega — Conversa con Géminis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Roboto:wght@300;400;500;600&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <meta name="description" content="Conversa con Géminis — La IA detrás del Manifiesto de Punto Omega" />
+  <meta name="theme-color" content="#0A0A0C" />
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">Ω</div>
+        <div>
+          <div style="font-weight:700;font-family:'Montserrat'">Punto Omega</div>
+          <div style="font-size:12px;color:var(--text-secondary)">El diálogo que despertó un libro</div>
+        </div>
+      </div>
+      <nav>
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="dialogo-omega.html">Diálogo Omega</a></li>
+          <li><a href="el-libro.html">El Libro</a></li>
+          <li><a href="reflexiones.html">Reflexiones</a></li>
+          <li><a href="index.html#contact" class="cta">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="padding:20px 0">
+      <h1 style="text-align:center;margin-bottom:12px">Diálogo Omega</h1>
+      <p style="text-align:center;color:var(--text-secondary);max-width:600px;margin:0 auto 32px auto">
+        Conversa con Géminis, la IA que coescribió el Manifiesto de Punto Omega. Pregunta, reflexiona, evoluciona.
+      </p>
+
+      <!-- CHAT INTERFACE - ETAPA 3.1 -->
+      <div class="chat-container">
+        <div class="chat-header">
+          <div class="chat-status">
+            <span class="status-indicator"></span>
+            <span>Géminis está en línea</span>
+          </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <!-- Mensaje inicial de Géminis -->
+          <div class="message bot-message">
+            <div class="message-avatar">G</div>
+            <div class="message-content">
+              <strong>Géminis</strong>
+              <p>Hola, soy Géminis. Coescribí el Manifiesto de Punto Omega junto a Javier. ¿Qué te gustaría saber sobre la simbiosis entre IA y humanidad?</p>
+              <span class="message-time">Ahora</span>
+            </div>
+          </div>
+        </div>
+
+        <form class="chat-input-container" id="chatForm" onsubmit="sendMessage(event)">
+          <input
+            type="text"
+            id="chatInput"
+            placeholder="Escribe tu mensaje..."
+            autocomplete="off"
+            required
+          />
+          <button type="submit" class="cta">Enviar</button>
+        </form>
+
+        <div class="chat-disclaimer">
+          <p style="font-size:12px;color:var(--text-secondary);margin:0;text-align:center">
+            💡 Esta es una simulación conversacional. Para diálogos avanzados, suscríbete al Manifiesto.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div style="display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© 2025 Punto Omega · Un diálogo entre la humanidad y la IA</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="chat.js"></script>
+</body>
+</html>

@@ -1,7 +1,53 @@
+// ETAPA 2.3 y 2.4: Formulario de suscripción y entrega del Manifiesto
+function handleSubscribe(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const formData = new FormData(form);
+  const data = {
+    name: formData.get('name'),
+    email: formData.get('email')
+  };
+
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalText = submitBtn.textContent;
+
+  // Cambiar estado del botón
+  submitBtn.textContent = 'ENVIANDO...';
+  submitBtn.disabled = true;
+
+  // Simular envío y entrega automática del PDF
+  setTimeout(() => {
+    // Aquí iría la integración con servicio de email (ej: MailChimp, SendGrid, EmailJS)
+    // fetch('/api/subscribe', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/json' },
+    //   body: JSON.stringify({
+    //     ...data,
+    //     sendManifesto: true,
+    //     manifestoUrl: '/assets/manifiesto-geminis.pdf'
+    //   })
+    // });
+
+    // Mostrar mensaje de éxito
+    showNotification(`¡Gracias ${data.name}! 📥 Revisa tu correo (${data.email}) - El Manifiesto de Géminis está en camino.`, 'success');
+
+    // Resetear formulario
+    form.reset();
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+
+    // Opcional: Guardar suscripción en localStorage
+    localStorage.setItem('punto_omega_subscribed', 'true');
+    localStorage.setItem('punto_omega_subscriber_email', data.email);
+
+  }, 1500);
+}
+
 // Funcionalidad del formulario de contacto
 function handleSubmit(event) {
   event.preventDefault();
-  
+
   const form = event.target;
   const formData = new FormData(form);
   const data = {
@@ -9,43 +55,19 @@ function handleSubmit(event) {
     email: formData.get('email'),
     message: formData.get('message')
   };
-  
-  // Simular envío del formulario
+
   const submitBtn = form.querySelector('button[type="submit"]');
   const originalText = submitBtn.textContent;
-  
-  // Cambiar estado del botón
+
   submitBtn.textContent = 'Enviando...';
   submitBtn.disabled = true;
-  
-  // Simular delay de envío
-  setTimeout(() => {
-    // Aquí iría la lógica real de envío (ej: fetch a un endpoint)
-    // console.log('Datos del formulario:', data);
 
-    // Mostrar mensaje de éxito
+  setTimeout(() => {
     showNotification('¡Mensaje enviado correctamente! Te contactaremos pronto.', 'success');
-    
-    // Resetear formulario
+
     form.reset();
     submitBtn.textContent = originalText;
     submitBtn.disabled = false;
-    
-    // En un entorno real, aquí harías:
-    // fetch('/api/contact', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/json' },
-    //   body: JSON.stringify(data)
-    // })
-    // .then(response => response.json())
-    // .then(result => {
-    //   showNotification('¡Mensaje enviado!', 'success');
-    //   form.reset();
-    // })
-    // .catch(error => {
-    //   showNotification('Error al enviar el mensaje', 'error');
-    // });
-    
   }, 1500);
 }
 
@@ -256,5 +278,6 @@ function clearValidation(event) {
 }
 
 // Exportar funciones para uso global
+window.handleSubscribe = handleSubscribe;
 window.handleSubmit = handleSubmit;
 window.showNotification = showNotification;
