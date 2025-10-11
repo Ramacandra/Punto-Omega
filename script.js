@@ -30,7 +30,7 @@ function handleSubscribe(event) {
     // });
 
     // Mostrar mensaje de éxito
-    showNotification(`¡Gracias ${data.name}! 📥 Revisa tu correo (${data.email}) - El Manifiesto de Géminis está en camino.`, 'success');
+    showNotification(`🎉 ¡Bienvenido a la comunidad, ${data.name}! Revisa ${data.email} - Tu Manifiesto de Géminis + acceso anticipado están en camino.`, 'success');
 
     // Resetear formulario
     form.reset();
