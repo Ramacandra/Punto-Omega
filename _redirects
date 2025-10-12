@@ -1,0 +1,8 @@
+# Netlify Redirects
+# Documentación: https://docs.netlify.com/routing/redirects/
+
+# Redirect www to non-www
+https://www.proyecto-punto-omega.com/* https://proyecto-punto-omega.com/:splat 301!
+
+# Custom 404
+/* /index.html 404

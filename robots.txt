@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Archivos que no queremos indexar
+Disallow: /assets/
+Disallow: /*.js
+Disallow: /*.css
+
+# Sitemap
+Sitemap: https://proyecto-punto-omega.com/sitemap.xml

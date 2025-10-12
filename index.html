@@ -62,7 +62,22 @@
           <p style="margin:0 0 16px 0;text-align:center;color:var(--text-secondary);font-size:14px">
             Recibe reflexiones exclusivas, avances del libro y diálogos con Géminis directamente en tu correo.
           </p>
-          <form id="subscribeForm" onsubmit="handleSubscribe(event)">
+          <form
+            id="subscribeForm"
+            name="suscripcion-comunidad"
+            method="POST"
+            data-netlify="true"
+            data-netlify-honeypot="bot-field"
+            onsubmit="handleSubscribe(event)"
+          >
+            <!-- Campo oculto requerido por Netlify -->
+            <input type="hidden" name="form-name" value="suscripcion-comunidad" />
+
+            <!-- Anti-bot field (invisible) -->
+            <p style="display:none">
+              <label>No llenar: <input name="bot-field" /></label>
+            </p>
+
             <input type="text" name="name" placeholder="Tu nombre" required />
             <input type="email" name="email" placeholder="Tu correo electrónico" required />
             <button class="cta" type="submit" style="width:100%;padding:16px;font-size:16px">
